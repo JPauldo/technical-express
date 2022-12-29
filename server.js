@@ -26,7 +26,7 @@ const sess = {
 
 app.use(session(sess));
 
-app.engine('.hbs', hbs.engine({ ext_name: '.hbs' }));
+app.engine('.hbs', () => hbs.engine({ ext_name: '.hbs' }));
 app.set('view engine', 'hbs');
 
 app.use(express.json());

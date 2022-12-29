@@ -1,7 +1,12 @@
 [
   {
-    "message": "",
-    "user_id": "",
-    "post_id": ""
+    "message": "Hi, I was wondering if there are any other ways to speed up my computer that don't involve upgrading hardware or using software tools. My computer is pretty old, so I'm not sure if I want to invest in new hardware or software.",
+    "user_id": "5",
+    "post_id": "1"
+  },
+  {
+    "message": "Hi there! There are a few other things you can try to speed up your computer without upgrading hardware or using software tools.\\n\\nUninstall unnecessary programs: If you have a lot of programs installed that you don't use, uninstalling them can free up resources and improve your computer's performance.\\n\\nDisable startup programs: Some programs automatically start up when you turn on your computer, which can slow it down. Go to your task manager and disable any programs that you don't need to start automatically.\\n\\nAdjust your power settings: If you're using a laptop, you can adjust your power settings to optimize performance. Go to your control panel and select \"Power Options\" to see your options.\\n\\nDefragment your hard drive: Over time, the files on your hard drive can become fragmented, which can slow down your computer. Use the disk defragmenter tool to reorganize your files and improve performance.\\n\\nI hope these tips help! Let me know if you have any other questions.",
+    "user_id": "1",
+    "post_id": "1"
   }
 ]
