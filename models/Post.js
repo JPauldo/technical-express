@@ -11,6 +11,10 @@ Post.init(
       autoIncrement: true,
       allowNull: false
     },
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     message: {
       type: DataTypes.TEXT,
       allowNull: false
@@ -28,7 +32,7 @@ Post.init(
     sequelize,
     timestamps: false,
     underscored: true,
-    modelName: 'post',
+    modelName: 'post'
   }
 );
 
