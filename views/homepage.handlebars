@@ -1,0 +1,14 @@
+{{#each posts as |post| }}
+{{ log post }}
+<a href="" target="_blank" rel="noopener noreferrer"></a>
+<section class="card">
+  <header class="card-header">
+    <p class="card-header-title">{{ post.title }}</p>
+  </header>
+  <section class="card-content">
+    <section class="content">
+      {{ post.message }}
+    </section>
+  </section>
+</section>
+{{/each}}
