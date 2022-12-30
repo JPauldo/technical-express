@@ -26,5 +26,8 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/login', (req, res) => {});
+router.get('/signup', (req, res) => {});
+router.get('/profile', (req, res) => {});
+router.get('/post/:id', (req, res) => {});
 
 module.exports = router;
