@@ -26,6 +26,31 @@ router.post('/login', async (req, res) => {
       req.session.logged_in = true;
       
       res.status(200).json({ user: userData, message: 'You are now logged in!' });
+
+      res.redirect('/');
+    });
+
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+router.post('/signup', async (req, res) => {
+  try {
+    const dbUserData = User.create({
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      password: req.body.password
+    });
+
+    req.session.save(() => {
+      req.session.userId = userData.id;
+      req.session.loggedIn = true;
+      
+      res.status(200).json({ user: userData, message: `${ dbUserData.firstName } are now logged in!` });
+
+      res.redirect('/profile');
     });
 
   } catch (err) {
