@@ -26,8 +26,6 @@ router.post('/login', async (req, res) => {
       req.session.logged_in = true;
       
       res.status(200).json({ user: userData, message: 'You are now logged in!' });
-
-      res.redirect('/');
     });
 
   } catch (err) {
@@ -37,7 +35,7 @@ router.post('/login', async (req, res) => {
 
 router.post('/signup', async (req, res) => {
   try {
-    const dbUserData = User.create({
+    const userData = User.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,
@@ -48,9 +46,7 @@ router.post('/signup', async (req, res) => {
       req.session.userId = userData.id;
       req.session.loggedIn = true;
       
-      res.status(200).json({ user: userData, message: `${ dbUserData.firstName } are now logged in!` });
-
-      res.redirect('/profile');
+      res.status(200).json({ user: userData, message: `${ userData.firstName } are now logged in!` });
     });
 
   } catch (err) {
