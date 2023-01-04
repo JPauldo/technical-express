@@ -1,0 +1,46 @@
+<h2>Sign Up</h2>
+
+<form class="signup">
+  <section class="field is-grouped">
+    <p class="control">
+      <input type="text" class="input" id="firstName-signup" placeholder="First Name" required>
+    </p>
+
+    <p class="control">
+      <input type="text" class="input" id="lastName-signup" placeholder="Last Name" required>
+    </p>
+  </section>
+
+  <section class="field">
+    <label class="label">Email</label>
+    <p class="control has-icons-left has-icons-right">
+      <input type="email" class="input" id="email-signup" placeholder="Email" required>
+      <span class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+      </span>
+      <span class="icon is-small is-right">
+        <i class="fas fa-check"></i>
+      </span>
+    </p>
+  </section>
+  
+  <section class="field">
+    <label class="label">Password</label>
+    <p class="control has-icons-left">
+      <input type="password" class="input" id="password-signup" placeholder="Password" minlength="8" required>
+      <span class="icon is-small is-left">
+        <i class="fas fa-lock"></i>
+      </span>
+    </p>
+  </section>
+
+  <section class="field">
+    <p class="control">
+      <button class="button is-primary" type="submit">
+        Sign Up
+      </button>
+    </p>
+  </section>
+</form>
+
+<script src="/js/signup.js"></script>

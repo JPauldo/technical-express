@@ -1,0 +1,18 @@
+<section class="card">
+  <header class="card-header">
+    <a class="card-header-title title is-4" 
+        href="/post/{{ post.id }}" 
+        target="_blank">
+      {{ post.title }}
+    </a>
+  </header>
+  <section class="card-content">
+    <pre class="content is-clipped">
+      {{ post.message }}
+    </pre>
+  </section>
+</section>
+
+{{#each comments as |comment|}}
+  {{> comment-details}}
+{{/each}}
