@@ -1,18 +1,7 @@
 {{#each posts as |post| }}
 {{!-- {{ log post }} --}}
 {{!-- {{ log this }} --}}
-<a href="/post/{{ post.id }}" target="_blank">
-  <section class="card">
-    <header class="card-header">
-      <p class="card-header-title title is-4">{{ post.title }}</p>
-    </header>
-    <section class="card-content">
-      <pre class="content is-clipped">
-        {{ post.message }}
-      </pre>
-    </section>
-  </section>
-</a>
+ {{> post-details}}
 {{/each}}
 {{!-- style="width: 50px; text-overflow: ellipsis; white-space: nowrap; --}}
 {{!-- overflow: hidden;" --}}
