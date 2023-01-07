@@ -1,13 +1,12 @@
 const commentFormHandler = async (event) => {
   event.preventDefault();
 
-  const email = document.querySelector('#email-login').value.trim();
-  const password = document.querySelector('#password-login').value.trim();
+  const message = document.querySelector('#comment-message').value.trim();
 
   if (email && password) {
-    const response = await fetch('/api/users/login', {
+    const response = await fetch('/api/comment', {
       method: 'POST',
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ message, user_id, post_id }),
       headers: { 'Content-Type': 'application/json' },
     });
 

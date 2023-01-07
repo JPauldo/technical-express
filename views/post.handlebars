@@ -7,12 +7,19 @@
     </a>
   </header>
   <section class="card-content">
-    <pre class="content is-clipped">
+    <p class="content ">
       {{ post.message }}
-    </pre>
+    </p>
   </section>
+  <footer class="card-footer">
+    <a href="#" class="card-footer-item" id="reply">Reply</a>
+  </footer>
 </section>
 
 {{#each comments as |comment|}}
   {{> comment-details}}
 {{/each}}
+
+<button class="button is-responsive">
+  Default
+</button>

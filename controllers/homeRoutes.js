@@ -53,7 +53,10 @@ router.get('/signup', (req, res) => {
 
 router.get('/profile', async (req, res) => {
   try {
-    const profileData = await Post.findByPk(req.session.userId, {
+    const profileData = await Post.findAll({
+      where: {
+        userId: req.session.userId
+      },
       include: [
         { 
           model: User,
@@ -61,16 +64,15 @@ router.get('/profile', async (req, res) => {
         }
       ]
     });
-    console.log(profileData);
 
-    const userPosts = profileData.map((userPost) => userPost.get({ plain: true }));
-
+    const userPosts = profileData.map((post) => post.get({ plain: true }));
     console.log(userPosts);
 
     res.render('profile', {
       userPosts
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -100,15 +102,13 @@ router.get('/post/:id', async (req, res) => {
     console.log(postData.get({ plain: true }));
     
     const post = postData.get({ plain: true });
-    console.log('Raw Data', postData);
-    console.log('Post', post);
 
     const comments = commentData.map((comment) => comment.get({ plain: true }));
-    console.log('Raw Data', commentData);
 
-    console.log('Comment', comments);
-
-    res.status(200).json(comments);
+    res.render('post', {
+      post,
+      comments
+    })
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
