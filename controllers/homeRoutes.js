@@ -69,7 +69,8 @@ router.get('/profile', async (req, res) => {
     console.log(userPosts);
 
     res.render('profile', {
-      userPosts
+      userPosts,
+      userId: req.session.userId
     });
   } catch (err) {
     console.log(err);
@@ -82,32 +83,21 @@ router.get('/post/:id', async (req, res) => {
     const postData = await Post.findByPk(req.params.id, {
       include: [
         {
-          model: User,
-          attributes: ['firstName', 'lastName']
+          model: Comment,
+          include: [
+            {
+              model: User,
+              attributes: ['username']
+            }
+          ]
         },
       ]
     });
 
-    const commentData = await Comment.findAll({
-      where: {
-        postId: req.params.id
-      }, 
-      include: [
-        {
-          model: User,
-          attributes: ['firstName', 'lastName']
-        }
-      ]
-    });
-    console.log(postData.get({ plain: true }));
-    
     const post = postData.get({ plain: true });
 
-    const comments = commentData.map((comment) => comment.get({ plain: true }));
-
     res.render('post', {
-      post,
-      comments
+      post
     })
   } catch (err) {
     console.log(err);

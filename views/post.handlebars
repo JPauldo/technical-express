@@ -1,10 +1,8 @@
 <section class="card">
   <header class="card-header">
-    <a class="card-header-title title is-4" 
-        href="/post/{{ post.id }}" 
-        target="_blank">
+    <p class="card-header-title title is-4">
       {{ post.title }}
-    </a>
+    </p>
   </header>
   <section class="card-content">
     <p class="content ">
@@ -16,7 +14,7 @@
   </footer>
 </section>
 
-{{#each comments as |comment|}}
+{{#each post.comments as |comment|}}
   {{> comment-details}}
 {{/each}}
 
