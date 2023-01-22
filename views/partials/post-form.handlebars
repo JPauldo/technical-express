@@ -1,0 +1,28 @@
+<form class="post-form">
+  <section class="field">
+    <label class="label">Post Title</label>
+    <section class="control">
+      <input 
+        type="text" 
+        class="input" 
+        id="post-title" 
+        placeholder="What is the subject of your topic?">
+    </section>
+  </section>
+  <section class="field">
+    <label class="label">Message</label>
+    <section class="control">
+      <textarea
+        id="post-message"
+        class="textarea has-fixed-size"
+        placeholder="What would you like to talk about?"
+        data-user={{ user }}
+      ></textarea>
+    </section>
+  </section>
+  <section class="buttons is-centered">
+    <button type="submit" class="button is-primary">
+      <strong>Post</strong>
+    </button>
+  </section>
+</form>

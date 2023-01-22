@@ -1,21 +1,25 @@
 {{#each userPosts as |post|}}
   {{> post-details}}
 {{/each}}
-<button class="button is-primary modal-button" data-target="#modal">Normal</button>
+<button class="button is-info modal-button is-fullwidth js-modal-trigger" data-target="modal-js-post">
+  <span class="icon">
+    <i class="fa-solid fa-plus"></i>
+  </span>
+  <span>Create New Post</span>
+</button>
 
-<div class="modal" id="modal">
-  <div class="modal-background"></div>
-  <div class="modal-card">
-    <header class="modal-card-head">
-      <p class="modal-card-title">Post Details</p>
-      <button class="delete" aria-label="close"></button>
-    </header>
-    <section class="modal-card-body">
-      <form class="post-form"></form>
+<article id="modal-js-post" class="modal">
+  <section class="modal-background"></section>
+  <section class="modal-content">
+    <section class="card">
+      <section class="card-content">
+        <section class="content">
+          {{> post-form user=userId }}
+        </section>
+      </section>
     </section>
-    <footer class="modal-card-foot">
-      <button class="button is-success">Save Changes</button>
-      <button class="button">Cancel</button>
-    </footer>
-  </div>
-</div>
+  </section>
+</article>
+
+<script src="/js/post.js"></script>
+<script src="/js/modal.js"></script>

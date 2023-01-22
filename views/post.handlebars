@@ -19,26 +19,17 @@
 {{/each}}
 
 <article id="modal-js-reply" class="modal">
-  <div class="modal-background"></div>
+  <section class="modal-background"></section>
   <section class="modal-content">
     <section class="card">
       <section class="card-content">
-        <div class="content">
-          <form>
-            <section class="field">
-              <section class="control">
-                <textarea name="response" class="textarea has-fixed-size" placeholder="Type your response..."></textarea>
-              </section>
-            </section>
-            <section>
-              <button class="button is-primary">Submit Reply</button>
-            </section>
-          </form>
-        </div>
+        <section class="content">
+          {{> comment-form user=userId post=post.id }}
+        </section>
       </section>
     </section>
   </section>
-  <button class="modal-close is-large" aria-label="close"></button>
 </article>
 
+<script src="/js/comment.js"></script>
 <script src="/js/modal.js"></script>

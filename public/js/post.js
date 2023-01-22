@@ -1,22 +1,26 @@
 const postFormHandler = async (event) => {
   event.preventDefault();
 
+  const messageEl = document.querySelector('#post-message');
+
   const title = document.querySelector('#post-title').value.trim();
-  const message = document.querySelector('#post-message').value.trim();
+  const message = messageEl.value.trim();
+  const userId = messageEl.dataset.user;
+  console.log(title, message, userId);
 
-  if (email && password) {
-    const response = await fetch('/api/posts', {
-      method: 'POST',
-      body: JSON.stringify({ email, password }),
-      headers: { 'Content-Type': 'application/json' },
-    });
+  // if (title && message) {
+  //   const response = await fetch('/api/posts', {
+  //     method: 'POST',
+  //     body: JSON.stringify({ title, message, userId }),
+  //     headers: { 'Content-Type': 'application/json' },
+  //   });
 
-    if (response.ok) {
-      document.location.replace(`/profile/${response.id}`);
-    } else {
-      alert('Failed to log in.');
-    }
-  }
+  //   if (response.ok) {
+  //     document.location.replace(`/profile/${response.id}`);
+  //   } else {
+  //     alert('Failed to log in.');
+  //   }
+  // }
 };
 
 document
