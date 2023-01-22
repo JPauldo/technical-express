@@ -6,21 +6,20 @@ const postFormHandler = async (event) => {
   const title = document.querySelector('#post-title').value.trim();
   const message = messageEl.value.trim();
   const userId = messageEl.dataset.user;
-  console.log(title, message, userId);
 
-  // if (title && message) {
-  //   const response = await fetch('/api/posts', {
-  //     method: 'POST',
-  //     body: JSON.stringify({ title, message, userId }),
-  //     headers: { 'Content-Type': 'application/json' },
-  //   });
+  if (title && message) {
+    const response = await fetch('/api/posts', {
+      method: 'POST',
+      body: JSON.stringify({ title, message, userId }),
+      headers: { 'Content-Type': 'application/json' },
+    });
 
-  //   if (response.ok) {
-  //     document.location.replace(`/profile/${response.id}`);
-  //   } else {
-  //     alert('Failed to log in.');
-  //   }
-  // }
+    if (response.ok) {
+      document.location.replace(`/profile`);
+    } else {
+      alert('Failed to log in.');
+    }
+  }
 };
 
 document

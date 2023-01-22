@@ -5,22 +5,21 @@ const commentFormHandler = async (event) => {
 
   const message = commentEl.value.trim();
   const { user, post } = commentEl.dataset;
-  console.log(message, user, post);
 
-  // if (message) {
-  //   console.log('Here');
-  //   const response = await fetch('/api/comments', {
-  //     method: 'POST',
-  //     body: JSON.stringify({ message, userId: user, postId: post }),
-  //     headers: { 'Content-Type': 'application/json' },
-  //   });
+  if (message) {
+    console.log('Here');
+    const response = await fetch('/api/comments', {
+      method: 'POST',
+      body: JSON.stringify({ message, userId: user, postId: post }),
+      headers: { 'Content-Type': 'application/json' },
+    });
 
-  //   if (response.ok) {
-  //     document.location.replace(`/profile/${response.id}`);
-  //   } else {
-  //     alert('Failed to log in.');
-  //   }
-  // }
+    if (response.ok) {
+      document.location.replace(`/post/${post}`);
+    } else {
+      alert('Failed to log in.');
+    }
+  }
 };
 
 document

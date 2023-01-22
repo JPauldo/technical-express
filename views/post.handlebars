@@ -9,13 +9,15 @@
       {{ post.message }}
     </p>
   </section>
+  {{#if loggedIn}}
   <footer class="card-footer">
     <a class="card-footer-item js-modal-trigger" data-target="modal-js-reply" data-message="">Reply</a>
   </footer>
+  {{/if}}
 </section>
 
 {{#each post.comments as |comment|}}
-  {{> comment-details}}
+  {{> comment-details login=../loggedIn}}
 {{/each}}
 
 <article id="modal-js-reply" class="modal">
