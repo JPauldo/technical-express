@@ -9,7 +9,10 @@
       {{ message }}
     </p>
   </section>
+  <p class="has-text-right pr-2">
+    {{ format_date createdAt }} {{ format_time createdAt }}
+  </p>
   <footer class="card-footer">
-    <p></p>
+    <a class="card-footer-item js-modal-trigger" data-target="modal-js-reply" data-message="">Reply</a>
   </footer>
 </section>
