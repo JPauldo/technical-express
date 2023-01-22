@@ -13,7 +13,6 @@ router.get('/', async (req, res) => {
     });
 
     const posts = postData.map((post) => post.get({ plain: true }));
-    console.log(posts);
 
     res.render('homepage', {
       posts,
@@ -70,6 +69,7 @@ router.get('/profile', async (req, res) => {
 
     res.render('profile', {
       userPosts,
+      loggedIn: req.session.loggedIn,
       userId: req.session.userId
     });
   } catch (err) {
@@ -91,13 +91,18 @@ router.get('/post/:id', async (req, res) => {
             }
           ]
         },
+        {
+          model: User,
+          attributes: ['username']
+        }
       ]
     });
 
     const post = postData.get({ plain: true });
 
     res.render('post', {
-      post
+      post,
+      loggedIn: req.session.loggedIn
     })
   } catch (err) {
     console.log(err);

@@ -25,10 +25,6 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item">
-          Home
-        </a>
-
         {{#if loggedIn}}
         <a class="navbar-item" href="/profile">
           Profile
@@ -64,7 +60,7 @@
       
   </footer>
 
-  {{#if logged_in}}
+  {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>

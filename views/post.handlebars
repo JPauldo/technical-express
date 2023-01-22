@@ -1,4 +1,4 @@
-<section class="card">
+<section class="card my-3">
   <header class="card-header">
     <p class="card-header-title title is-4">
       {{ post.title }}
@@ -10,7 +10,7 @@
     </p>
   </section>
   <footer class="card-footer">
-    <a href="#" class="card-footer-item" id="reply">Reply</a>
+    <a class="card-footer-item js-modal-trigger" data-target="modal-js-reply" data-message="">Reply</a>
   </footer>
 </section>
 
@@ -18,6 +18,27 @@
   {{> comment-details}}
 {{/each}}
 
-<button class="button is-responsive">
-  Default
-</button>
+<article id="modal-js-reply" class="modal">
+  <div class="modal-background"></div>
+  <section class="modal-content">
+    <section class="card">
+      <section class="card-content">
+        <div class="content">
+          <form>
+            <section class="field">
+              <section class="control">
+                <textarea name="response" class="textarea has-fixed-size" placeholder="Type your response..."></textarea>
+              </section>
+            </section>
+            <section>
+              <button class="button is-primary">Submit Reply</button>
+            </section>
+          </form>
+        </div>
+      </section>
+    </section>
+  </section>
+  <button class="modal-close is-large" aria-label="close"></button>
+</article>
+
+<script src="/js/modal.js"></script>
