@@ -1,7 +1,56 @@
 [
   {
-    "title": "5 Ways to Speed Up Your Computer",
-    "message": "Are you tired of waiting for your computer to load programs and open files? If so, it might be time to give it a little boost. Here are 5 easy ways to speed up your computer:\\n\\n1. Close unnecessary programs and services: If you have a lot of programs running in the background, it can slow down your computer's performance. Take a look at your task manager and close any programs that you don't need running.\\n\\n2. Clean up your hard drive: Over time, your hard drive can get cluttered with temporary files, downloaded files, and other junk. Use a disk cleanup tool to delete these files and free up space on your hard drive.\\n\\n3. Run a malware scan: Malware can slow down your computer and even steal personal information. Use an antivirus program to scan for and remove malware.\\n\\n4. Upgrade your hardware: If your computer is getting old and slow, you may need to upgrade your hardware. Consider adding more RAM or getting a solid-state drive, which can significantly improve your computer's speed.\\n\\n5. Use a PC optimizer: PC optimizers are software programs that can help you optimize your computer's settings and improve its performance. Look for a reputable PC optimizer and run it on your computer to see if it helps speed things up.\\n\\nBy following these tips, you should be able to get your computer running faster in no time. Happy computing!",
-    "user_id": "1"
+    "id": 1,
+    "title": "Getting Started with HTML",
+    "message": "I'm new to HTML and was wondering if anyone had any tips for getting started? I'm using Notepad and have created a basic structure, but I'm having trouble with some of the elements. Any help would be appreciated!",
+    "userId": "1"
+  },
+  {
+    "id": 2,
+    "title": "Introduction to React.js",
+    "message": "Hi everyone, I'm trying to learn React.js and was wondering if anyone had any resources or tips to share. I'm having trouble understanding the concept of components and how they fit into the overall structure of a React app. Any help would be greatly appreciated!",
+    "userId": "7"
+  },
+  {
+    "id": 3,
+    "title": "Exploring Angular.js",
+    "message": "I'm new to Angular.js and am having some trouble getting started. I'm trying to build a simple CRUD app and am having trouble with the data binding and routing. Does anyone have any advice or resources to share?",
+    "userId": "8"
+  },
+  {
+    "id": 4,
+    "title": "Handlebars: A Templating Engine for JavaScript",
+    "message": "Hi all, I'm trying to use Handlebars to build a dynamic website and am having some trouble getting started. Does anyone have any experience with Handlebars or know of any good tutorials or resources?",
+    "userId": "4"
+  },
+  {
+    "id": 5,
+    "title": "JavaScript Fundamentals",
+    "message": "Hi everyone, I'm new to JavaScript and was wondering if anyone had any tips for getting started. I'm having trouble with some of the basic concepts, such as variables and data types. Any help would be appreciated!",
+    "userId": "1"
+  },
+  {
+    "id": 6,
+    "title": "Python for Data Science",
+    "message": "I'm trying to learn Python for data science and was wondering if anyone had any recommendations for libraries or tools to use. I'm particularly interested in NumPy, Pandas, and Matplotlib. Any advice would be greatly appreciated!",
+    "userId": "5"
+  },
+  {
+    "id":7,
+    "title":"Scala: A Language for Big Data Processing",
+    "message":"Hi everyone, I'm interested in learning Scala for big data processing. Does anyone have any experience with Scala or know of any good resources for getting started? Any advice would be greatly appreciated!",
+    "userId":"7"
+  },
+  {
+    "id":8,
+    "title":"OOPs in Python",
+    "message":"I'm trying to learn object-oriented programming in Python and was wondering if anyone had any tips or resources to share. I'm having trouble understanding some of the key concepts, such as inheritance and polymorphism. Any help would be greatly appreciated!",
+    "userId":"5"
+  },
+  {
+    "id":9,
+    "title":"Working with APIs in Python",
+    "message":"Hi all, I'm trying to build a web application that uses APIs and was wondering if anyone had any experience with this in Python. I'm having trouble understanding how to make API calls and handle the response data. Any advice or resources would be greatly appreciated!",
+    "userId":"5"
   }
 ]

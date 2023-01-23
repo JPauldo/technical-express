@@ -1,18 +1,21 @@
 const commentFormHandler = async (event) => {
   event.preventDefault();
 
-  const email = document.querySelector('#email-login').value.trim();
-  const password = document.querySelector('#password-login').value.trim();
+  const commentEl = document.querySelector('#comment-message');
 
-  if (email && password) {
-    const response = await fetch('/api/users/login', {
+  const message = commentEl.value.trim();
+  const { user, post } = commentEl.dataset;
+
+  if (message) {
+    console.log('Here');
+    const response = await fetch('/api/comments', {
       method: 'POST',
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ message, userId: user, postId: post }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      document.location.replace(`/profile/${response.id}`);
+      document.location.replace(`/post/${post}`);
     } else {
       alert('Failed to log in.');
     }

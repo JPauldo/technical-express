@@ -1,32 +1,82 @@
 [
   {
-    "firstName": "Mary",
+    "id": "1",
+    "firstName": "Marie",
     "lastName": "Smith",
     "email": "marysmith@example.com",
+    "username": "Savvy_Marie",
     "password": "M@rySm!th#123"
   },
   {
+    "id": "2",
     "firstName": "John",
     "lastName": "Doe",
     "email": "johndoe@example.com",
+    "username": "Genius_Boi",
     "password": "J0hnDoe$456"
   },
   {
-    "firstName": "Jennifer",
-    "lastName": "Thompson",
-    "email": "jenniferthompson@example.com",
-    "password": "JeNN!ferTh0mps0n_159"
+    "id": "3",
+    "firstName": "Lisa",
+    "lastName": "Johnson",
+    "email": "lisajohnson@example.com",
+    "username": "Data_Science_Pro",
+    "password": "Li5aJ0hnson%789"
   },
   {
+    "id": "4",
     "firstName": "David",
     "lastName": "Williams",
     "email": "davidwilliams@example.com",
-    "password": ""
+    "username": "OOPs_Wizard",
+    "password": "D@vidW!lliams^321"
   },
   {
+    "id": "5",
+    "firstName": "Jessica",
+    "lastName": "Brown",
+    "email": "jessicabrown@example.com",
+    "username": "Tech_Guru_Jess",
+    "password": "Je55icaBr0wn&654"
+  },
+  {
+    "id": "6",
+    "firstName": "Michael",
+    "lastName": "Davis",
+    "email": "michaeldavis@example.com",
+    "username": "Maven_Maven",
+    "password": "M!chaelD@v!s*987"
+  },
+  {
+    "id": "7",
     "firstName": "Sarah",
     "lastName": "Thompson",
     "email": "sarahthompson@example.com",
+    "username": "Scala_Ninja",
     "password": "S@rahTh0mpson(246"
+  },
+  {
+    "id": "8",
+    "firstName": "Mark",
+    "lastName": "Anderson",
+    "email": "markanderson@example.com",
+    "username": "Titan_Mark",
+    "password": "M@rkAnders0n)369"
+  },
+  {
+    "id": "9",
+    "firstName": "Jennifer",
+    "lastName": "Thompson",
+    "email": "jenniferthompson@example.com",
+    "username": "PyGoddess_Jen",
+    "password": "JeNN!ferTh0mps0n_159"
+  },
+  {
+    "id": "10",
+    "firstName": "Robert",
+    "lastName": "Smith",
+    "email": "robertsmith@example.com",
+    "username": "The_React_Whizkid",
+    "password": "R0bertSm!th+753"
   }
 ]

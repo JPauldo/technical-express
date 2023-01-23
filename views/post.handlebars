@@ -1,18 +1,37 @@
-<section class="card">
+<section class="card my-3">
   <header class="card-header">
-    <a class="card-header-title title is-4" 
-        href="/post/{{ post.id }}" 
-        target="_blank">
+    <p class="card-header-title title is-4">
       {{ post.title }}
-    </a>
+    </p>
   </header>
   <section class="card-content">
-    <pre class="content is-clipped">
+    <p class="content ">
       {{ post.message }}
-    </pre>
+    </p>
   </section>
+  {{#if loggedIn}}
+  <footer class="card-footer">
+    <a class="card-footer-item js-modal-trigger" data-target="modal-js-reply" data-message="">Reply</a>
+  </footer>
+  {{/if}}
 </section>
 
-{{#each comments as |comment|}}
-  {{> comment-details}}
+{{#each post.comments as |comment|}}
+  {{> comment-details login=../loggedIn}}
 {{/each}}
+
+<article id="modal-js-reply" class="modal">
+  <section class="modal-background"></section>
+  <section class="modal-content">
+    <section class="card">
+      <section class="card-content">
+        <section class="content">
+          {{> comment-form user=userId post=post.id }}
+        </section>
+      </section>
+    </section>
+  </section>
+</article>
+
+<script src="/js/comment.js"></script>
+<script src="/js/modal.js"></script>

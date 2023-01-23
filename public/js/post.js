@@ -1,18 +1,21 @@
 const postFormHandler = async (event) => {
   event.preventDefault();
 
-  const email = document.querySelector('#email-login').value.trim();
-  const password = document.querySelector('#password-login').value.trim();
+  const messageEl = document.querySelector('#post-message');
 
-  if (email && password) {
-    const response = await fetch('/api/users/login', {
+  const title = document.querySelector('#post-title').value.trim();
+  const message = messageEl.value.trim();
+  const userId = messageEl.dataset.user;
+
+  if (title && message) {
+    const response = await fetch('/api/posts', {
       method: 'POST',
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ title, message, userId }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      document.location.replace(`/profile/${response.id}`);
+      document.location.replace(`/profile`);
     } else {
       alert('Failed to log in.');
     }

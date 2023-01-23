@@ -22,8 +22,8 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
+      req.session.loggedIn = true;
+      req.session.userId = userData.id;
       
       res.status(200).json({ user: userData, message: 'You are now logged in!' });
     });
@@ -35,18 +35,19 @@ router.post('/login', async (req, res) => {
 
 router.post('/signup', async (req, res) => {
   try {
-    const dbUserData = User.create({
+    const userData = await User.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
+      username: req.body.username,
       email: req.body.email,
       password: req.body.password
     });
 
     req.session.save(() => {
-      req.session.userId = userData.id;
       req.session.loggedIn = true;
+      req.session.userId = userData.id;
       
-      res.status(200).json({ user: userData, message: `${ dbUserData.firstName } are now logged in!` });
+      res.status(200).json({ user: userData, message: `${ userData.firstName } are now logged in!` });
     });
 
   } catch (err) {
@@ -55,7 +56,7 @@ router.post('/signup', async (req, res) => {
 });
 
 router.post('/logout', (req, res) => {
-  if (req.session.logged_in) {
+  if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
     });
